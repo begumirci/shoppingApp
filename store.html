@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/css.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
+  <script src="assets/js/main.js" type="module" defer></script>
+  <title>BookStore</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <h2 class="title">C&B</h2>
+    <ul class="pages">
+      <li><a href="index.html">Anasayfa</a></li>
+      <li><a href="store.html">Mağaza</a></li>
+    </ul>
+    <ul class="icons">
+      <li><i class="bi bi-person open-users-dialog"></i></li>
+      <li><i class="bi bi-search"></i></li>
+      <li class="basket-icon"><i class="bi bi-bag"></i>
+        <span class="basket-count"></span>
+      </li>
+    </ul>
+  </nav>
+  <dialog class="users-dialog">
+    <div class="position3">
+      <div class="no-register">x</div>
+      <!-- Giriş Formu -->
+      <form class="loginForm">
+        <input type="text" id="loginUsername" placeholder="Kullanıcı Adı" required>
+        <input type="password" id="loginPassword" placeholder="Şifre" required>
+        <button type="submit">Giriş</button>
+        <button class="register">Kayıt Ol</button>
+      </form>
+      <!-- Giriş Formu Bitti -->
+      <!-- Kayıt Formu -->
+      <form class="registrationForm unvisible">
+        <input type="text" id="registerUsername" placeholder="Kullanıcı Adı" required>
+        <input type="email" id="registerEmail" placeholder="Email" required>
+        <input type="password" id="registerPassword" placeholder="Şifre" required>
+        <button type="submit">Kayıt</button>
+        <button class="login">Giriş Yap</button>
+      </form>
+    </div>
+    <!-- Kayıt Formu Bitti -->
+  </dialog>
+  <!-- Banner -->
+  <div class="banner">
+    <img src="assets/images/kimberly-farmer-lUaaKCUANVI-unsplash.jpg" alt="">
+  </div>
+  <!-- Banner end -->
+
+  <!-- store-menu start -->
+
+  <ul class="books-category">
+    <li><a class="tumu active" href="#/tumu">Tümü</a></li>
+    <li><a class="kisisel-gelisim" href="#/kisiselgelisim">Kişisel Gelişim</a></li>
+    <li><a class="roman" href="#/roman">Roman</a></li>
+    <li><a class="finans" href="#/finans">Finans</a></li>
+    <li><a class="cocuk" href="#/cocuk">Çocuk</a></li>
+    <li><a class="bilim" href="#/bilim">Bilim</a></li>
+    <li><a class="tarih" href="#/tarih">Tarih</a></li>
+    <li><a class="polisiye" href="#/polisiye">Polisiye</a></li>
+  </ul>
+  <!-- store-menu end -->
+  <!-- store-materials start -->
+  <div class="books">
+    <!--
+       <div class="book">
+      <div class="position1">
+        <div class="book-image">
+          <a href="#"><img src="assets/images/nutuk.jpg" alt="book-img"></a>
+        </div>
+        <div class="book-information">
+          <h6 class="author-name">İlber Ortaylı</h6>
+          <div class="position2">
+            <h4 class="book-name">İnsan Gelecğini Nasıl Kurar?</h4>
+            <h4 class="book-price">34 TL</h4>
+            <button class="btn-add">Sepete Ekle</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="book-summary">ksnkdjnskadnslakmdlsamldmsakldmlsakmdlsmlkdmsakld</p>
+
+    </div> -->
+  </div>
+  <!-- store-materials end -->
+
+  <!-- sepet start -->
+  <dialog class="basket-modal">
+
+    <div class="basket-items">
+      <div class="close-modal">X</div>
+      <h2 class="my-bag">Sepetim</h2>
+      <ul class="little-books">
+        <!-- <li class="little-book">
+          <div class="position">
+            <div class="little-img">
+              <img src="assets/images/nutuk.jpg" width="100" height="100" alt="little-book">
+            </div>
+            <div class="little-book-information">
+              <h3 class="little-book-name">Nutuk</h3>
+              <p class="little-book-price">45 TL</p>
+              <p class="little-book-remove">Sepetten Çıkar</p>
+            </div>
+          </div>
+          <div class="little-book-quantity">
+            <span class="little-book-decrease">-</span>
+            <span class="little-book-number">2</span>
+            <span class="little-book-increase">+</span>
+          </div>
+        </li> -->
+      </ul>
+      <div class="basket-total">
+        <span class="total-price">Toplam: <span class="real-total"></span> TL</span>
+        <button class="go-basket">Ödemeye Git</button>
+      </div>
+    </div>
+
+  </dialog>
+  <!-- sepet end -->
+  <footer class="main-footer">
+    <div class="all-footer">
+      <h3 class="band-name">C&B</h3>
+      <ul class="icons">
+        <li>
+          <a href="https://www.youtube.com" target="_blank">
+            <img src="assets/images/Youtube Logo.png">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.spotify.com" target="_blank">
+            <img src="assets/images/Spotify Logo.png">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com" target="_blank">
+            <img src="assets/images/Facebook Logo.png">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>

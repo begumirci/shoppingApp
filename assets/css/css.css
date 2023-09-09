@@ -1,0 +1,527 @@
+*{
+    margin:0;
+    padding: 0;;
+}
+
+ul{
+    list-style: none;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+.navbar{
+    
+    width:80%;
+    margin-left:10% ;
+    margin-right: 10%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-top:10px;
+}
+
+.icons{
+    display: flex;
+    gap:30px;
+    cursor: pointer;
+}
+
+.basket-icon{
+    position: relative;
+}
+
+.basket-count{
+    position: absolute;
+    right: -0.7rem;
+    bottom: 6px;
+    width:20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basket-count:empty{
+  display: none;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top:20px;
+
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.content-section {
+    margin: 1em;
+}
+
+.content-section {
+    margin: 1em;
+}
+
+.section-header{
+  margin-bottom:4rem;
+  margin-top: 5rem;
+}
+
+.main-footer{
+  background-color: black;
+  height: 100px;
+}
+
+.all-footer{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-right: 10%;
+  margin-left:10%;
+  background-color: black;
+  padding-top:30px;
+  
+}
+
+.band-name{
+  color:white;
+}
+
+.icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.special-book{
+  padding:20px;
+}
+
+.special-book img{
+  margin: auto;
+  border-radius: 10px;
+}
+
+.close-dialog{
+  padding-left:20px;
+  margin-top:10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.summary-dialog{
+  width:450px;
+  border-radius: 10px;
+  border-color:white;
+  margin: auto;
+}
+
+.author-name2{
+  font-size: 20px;
+  margin-top:15px;
+  color:gray;
+}
+
+.book-name2{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #ffffff;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.btn-play {
+    display: block;
+    margin: 0 auto;
+    color: #000000;
+    font-size: 4em;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    text-align: center;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #000000;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #000000;
+}
+
+.book-row {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.book-row:last-child {
+    border: none;
+}
+
+.book-item {
+    display: inline-block;
+    padding-right: .5em;
+}
+
+.book-date {
+    color: #555;
+    width: 11%;
+    font-weight: bold;
+}
+
+.book-city {
+    width: 24%;
+}
+
+.book-arena {
+    width: 42%;
+}
+
+.book-btn {
+    max-width: 19%;
+}
+
+
+.section-header {
+    font-family: "Metal Mania";
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.pages{
+  display: flex;
+  gap:100px;
+}
+
+.pages a{
+  color:black;
+  text-decoration: none;
+}
+.pages a:hover{
+  color:gray;
+}
+
+.banner img{
+    margin-left:10%;
+    margin-right: 10%;
+    width:80%;
+    margin-top:10px;
+    height: 600px;
+    margin-top: 20px ;
+}
+
+.books-category{
+  display: flex;
+  padding:20px;
+  margin-left:10% ;
+  margin-right: 10%;
+  margin-top:25px;
+  background-color: rgba(0,0,0,0.05);
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.books-category li a{
+  color:black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.books-category li a:hover{
+  color:rgba(0,0,0,0.3);
+}
+
+.books{
+  margin-top:35px;
+  margin-left:10% ;
+  margin-right: 10%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:25px;
+  
+}
+
+.position3{
+  height: 300px;
+  width:250px;
+}
+
+.book{
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.02);
+  padding:20px;
+  border-radius: 10px;
+}
+
+.book-price{
+  margin-top:30px;
+}
+
+.position1{
+  display: flex;
+  gap:15px;
+}
+
+.position2{
+  margin-top:30px;
+}
+
+.book-information{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  width:50%;
+}
+
+.book-summary{
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+.btn-add{
+  width:50%;
+  background-color: whitesmoke;
+  border-color:white;
+  margin-top:30px;
+  cursor: pointer;
+}
+
+.btn-add:hover{
+  font-weight: bold;
+}
+
+.author-name{
+  font-size:20px;
+  color:gray;
+}
+
+.book-image img{
+  height: 312px;
+}
+
+dialog::backdrop{
+  background-color: #5c6a7950;
+}
+
+dialog{
+  transition: all 650ms ease-in-out;
+}
+
+.basket-items{
+  background-color: white;
+  width:350px;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top:0;
+  border-radius: 7px;
+  transition: all 650ms ease-in-out;
+}
+
+.no-book{
+  text-align: center;
+  font-size: 20px;
+  margin-bottom:30px;
+
+}
+
+
+.registrationForm{
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+  padding:20px;
+}
+
+.no-register{
+  padding:10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+  padding:20px;
+}
+
+.active{
+  color:gray;
+  font-weight: bold;
+}
+
+.unvisible{
+  display: none;
+}
+
+.visible{
+  display: block;
+}
+
+.my-bag{
+  text-align: center;
+  font-weight: bold;
+}
+
+.close-modal{
+  font-size:20px;
+  cursor: pointer;
+  padding-left:15px;
+  padding-top:7px;
+}
+
+.little-book{
+  display: flex;
+  align-items: center;
+  gap:25px;
+  margin-bottom:2rem;
+}
+
+.little-books{
+  padding:0 10px;
+  margin-top: 3rem;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.little-book-information{
+  display: flex;
+  flex-direction: column;
+  gap:7px;
+  width:120px;
+}
+
+.position{
+  display: flex;
+  align-items:flex-start;
+  gap:10px;
+}
+
+.little-book-price, .little-book-remove{
+  color:rgb(77, 76, 76);
+  font-size: 16px;
+}
+
+.little-book-name{
+  font-size:16px;
+  font-weight: bold;
+}
+
+.little-book-remove{
+  color:gray;
+  cursor: pointer;
+  
+}
+
+.little-book-remove:hover{
+  color:black;
+}
+
+.little-book-quantity{
+  font-size:1.5rem;
+  color:black;
+  font-weight: bold;
+}
+
+.little-book-decrease, .little-book-increase{
+  cursor: pointer;
+  color:purple;
+}
+
+.little-book-decrease{
+  margin-right: 5px;
+}
+
+.little-book-increase{
+  margin-left:5px;
+}
+
+.basket-total{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom:20px;
+  width: inherit;
+  gap:10px;
+}
+
+.go-basket{
+  width:200px;
+  background-color: #a683c450;
+  color:purple;
+  font-weight: bold;
+  font-size: 20px;
+  border-color: purple ;
+  border-radius: 7px;
+  border-style: solid;
+}
+
+.go-basket:hover{
+  background-color: purple;
+  color:white ;
+}
+
+.total-price{
+  font-size: 20px;
+  font-weight: bold;
+}
