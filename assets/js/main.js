@@ -378,14 +378,9 @@ function bindClick(){
   
   basketCount.innerHTML = basketNum;
   totalPrice.innerHTML = total;
-  // console.log(basketList);
-  // if(basketList.adet > basketList.product.stock ){
-  //   console.log('olmaz');
-  // };
   bindClick();
-
-  
 }
+
 //sepete ekleme
 function addBasket(bookId){
 
@@ -428,7 +423,6 @@ function removeBasket(bookId){
     basketBooks();
     basketcount();
   }
-    
 }
 
 //Burayı Sor
@@ -459,14 +453,9 @@ function decreaseBasket(bookId){
   }else{
     alert(`Bu üründen sadece ${basketList[findedIndex].product.stock} tane var.`)
   }
-  
-
   basketBooks();
   basketcount();
-  
-  
  }
-
  
 basketcount();
 loadData();
