@@ -433,11 +433,14 @@ function decreaseBasket(bookId){
 
   if(basketList[findedIndex].adet != 1){
     basketList[findedIndex].adet -=1;
+    total -= basketList[findedIndex].product.price;
+    basketNum -= 1;
   }else{
-    removeBasket(bookId);
+    total -= basketList[findedIndex].product.price;
+    basketNum -= 1;
+    basketList.splice(findedIndex,1);
   }
-  total -= basketList[findedIndex].product.price;
-  basketNum -= 1;
+  
   basketBooks();
   basketcount();
   
