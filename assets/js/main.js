@@ -17,7 +17,13 @@ const basketlistEl = document.querySelector('.little-books');
 const basketCount = document.querySelector('.basket-count');
 const totalPrice = document.querySelector('.real-total');
 
-
+function basketcount(){
+  if(basketCount.innerText === '0'){
+    basketCount.classList.add('unvisible');
+  }else{
+    basketCount.classList.remove('unvisible');
+  }
+}
 
 //dialoglar
 
@@ -58,6 +64,7 @@ let bookList = [];
 let basketList = [];
 let basketNum = 0;
 let total =0;
+
 
 
 
@@ -338,6 +345,7 @@ function bindClick(){
 
 }
 
+
 //sepet oluşturma
  function basketBooks(){
 
@@ -367,11 +375,16 @@ function bindClick(){
           </div>
          </li>`
   });
-  if(basketNum > 0){
-    basketCount.innerHTML = basketNum;
-  }
-  if(total > 0){totalPrice.innerHTML = total};
+  
+  basketCount.innerHTML = basketNum;
+  totalPrice.innerHTML = total;
+  // console.log(basketList);
+  // if(basketList.adet > basketList.product.stock ){
+  //   console.log('olmaz');
+  // };
   bindClick();
+
+  
 }
 //sepete ekleme
 function addBasket(bookId){
@@ -385,29 +398,38 @@ function addBasket(bookId){
   adet: 1,
   product: myBook
  }
+
  basketList.push(addItem);
- basketNum+=1;
+ basketNum +=1;
  total += myBook.price;
  }else{
-  basketList[basketBookIndex].adet +=1;
-  basketNum +=1;
-  total += basketList[basketBookIndex].product.price;
+  if(basketList[basketBookIndex].adet < basketList[basketBookIndex].product.stock ){
+    basketList[basketBookIndex].adet +=1;
+    basketNum +=1;
+    total += basketList[basketBookIndex].product.price;
+  }else{
+    alert(`Bu üründen sadece ${basketList[basketBookIndex].product.stock} tane var.`);
+    
+  }
  }
   basketBooks();
-  
+  basketcount();
 }
 
 //sepetten çıkartma
 function removeBasket(bookId){
   bookId = this.dataset.basketid;
+  
   const findedIndex = basketList.findIndex(basket => basket.product.id == bookId);
   if(findedIndex != -1){
-    total -= basketList[findedIndex].product.price;
-    basketNum -=1;
-    basketList.splice(findedIndex,1);
-  }
+    total -= (basketList[findedIndex].product.price) * (basketList[findedIndex].adet);
+    basketNum -= basketList[findedIndex].adet ;
+    basketList.splice(findedIndex,basketList[findedIndex].adet);
     basketBooks();
+    basketcount();
   }
+    
+}
 
 //Burayı Sor
 //azaltma
@@ -422,8 +444,9 @@ function decreaseBasket(bookId){
   }
   total -= basketList[findedIndex].product.price;
   basketNum -= 1;
-
   basketBooks();
+  basketcount();
+  
  }
 //arttırma
  function increaseBasket(bookId){
@@ -431,17 +454,21 @@ function decreaseBasket(bookId){
   const findedIndex = basketList.findIndex(basket => basket.product.id == bookId);
   if(basketList[findedIndex].adet != basketList[findedIndex].product.stock){
     basketList[findedIndex].adet +=1;
+    total += basketList[findedIndex].product.price;
+    basketNum +=1;
   }else{
     alert(`Bu üründen sadece ${basketList[findedIndex].product.stock} tane var.`)
   }
-  total += basketList[findedIndex].product.price;
-  basketNum +=1;
+  
 
   basketBooks();
+  basketcount();
+  
   
  }
 
-
+ 
+basketcount();
 loadData();
 
 
