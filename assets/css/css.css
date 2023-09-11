@@ -11,6 +11,10 @@ ul{
   box-sizing: border-box;
 }
 
+.unvisible{
+  display: none;
+}
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
